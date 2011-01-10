@@ -16,7 +16,7 @@ $n = 0;
 // Loop through our array, show HTML source as HTML source; and line numbers too.
 foreach ($lines as $line_num => $line) {
 	
-	$ok = preg_match_all ('/[0-9]{6}[\s]+P:/i',$line, $vsecene);
+	$ok = preg_match_all ('/(P:|prodam)/i',$line, $vsecene);
 	
 	if($ok) {
 		$line2 = str_replace(array("\r\n", "\n", "\r"), " ", $line);
